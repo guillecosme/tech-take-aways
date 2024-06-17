@@ -1,2 +1,2 @@
-# tech-take-aways
-Personal repos for tech note taking
+# Tech Take Aways
+## Personal repo for tech note taking and sharing some knowledge
