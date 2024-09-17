@@ -1,0 +1,34 @@
+{
+	"Version": "2012-10-17",
+	"Statement": [
+		{
+			"Sid": "Set-Replication-for-objects",
+			"Principal": {
+				"AWS": "Source Account Role ARN"
+			},
+			"Effect": "Allow",
+			"Action": [
+				"s3:ReplicateDelete",
+				"s3:ReplicateObject"
+			],
+			"Resource": [
+				"arn:aws:s3:::{target_bucket_name}/*"
+			]
+		},
+		{
+			"Sid": "Set-Replication-for-bucket",
+			"Principal": {
+				"AWS": "Source Account Role ARN"
+			},
+			"Effect": "Allow",
+			"Action": [
+				"s3:GetBucketVersioning",
+				"s3:PutBucketVersioning",
+				"s3:List*"
+			],
+			"Resource": [
+				"arn:aws:s3:::{target_bucket_name}"
+			]
+		}
+	]
+}

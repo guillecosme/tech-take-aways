@@ -1,0 +1,14 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "KMS-Target-Bucket-Key",
+            "Effect": "Allow",
+            "Action": [
+                "kms:Encrypt",
+                "kms:GenerateDataKey"
+            ],
+            "Resource": "KMS-Target-Bucket-Key"
+        }
+    ]
+}
